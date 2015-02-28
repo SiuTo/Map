@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>map</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="map.css" />
+		<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="map.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<h1>MAP</h1>
+
+			<div class="menu">
+				<a href="about.html">About</a>
+			</div>
+			<br/>
+
+			<table>
+				<tr>
+					<td>minlon:</td>
+					<td id="minlon"></td>
+				</tr>
+				<tr>
+					<td>minlat:</td>
+					<td id="minlat"></td>
+				</tr>
+				<tr>
+					<td>maxlon:</td>
+					<td id="maxlon"></td>
+				</tr>
+				<tr>
+					<td>maxlat:</td>
+					<td id="maxlat"></td>
+				</tr>
+			</table>
+
+			<p id="coordinate">Coordinate: Unknown</p>
+			<button id="reset" type="button" style="float:left">Reset</button>
+			<button id="back" type="button" style="float:left">Back</button>
+		</div>
+		<canvas id="canvasOfMap" width="1000" height="600" style="position:absolute;top:10%;right:2%"></canvas>
+	</body>
+</html>
+

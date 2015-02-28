@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>About</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="map.css" />
+	</head>
+
+	<body>
+		<div style="margin:5% 10% 5% 10%">
+			<h1 style="text-align:center">About</h1>
+			<h3>关于网站</h3>
+			<div style="margin-left:3%">
+				<h4>功能介绍</h4>
+				<p>
+					网站从XML文件中读取数据构造一张地图，并实现以下功能：
+					<ol>
+						<li>动态显示鼠标在地图上所指位置的地理坐标</li>
+						<li>在地图上双击鼠标可放大显示所点击的区域</li>
+						<li>在地图上用鼠标拖动地图可实现地图的平移</li>
+						<li>点击Reset按钮撤销所有放大或平移操作，使地图回到初始状态</li>
+						<li>点击Back按钮撤销上一步放大或平移操作</li>
+					</ol>
+				</p>
+				<h4>使用说明</h4>
+				<p>
+					需要把网站代码放到服务器上，用http协议打开map.html文件，否则，若用file协议打开，地图在部分浏览器上无法显示。<br/>
+					网站兼容Firefox, Chrome等浏览器。<br/>
+					修改map.js文件中头部的inputFile变量的值，即可绘制不同的地图。<br/>
+					修改map.html文件中canvas的width属性可调整地图的大小（而height属性，程序会根据width自动修改）
+				</p>
+				<h4>实现思路</h4>
+				<p>
+					<ul>
+						<li>读入XML文件后先做一遍预处理，得到关于所有nodes和ways的各种信息，并建立索引，以使得后面的绘图和放大、平移等操作都能在短时间内完成</li>
+						<li>
+							利用Javascript对HTML事件做出反应，来实现与用户的交互
+						</li>
+						<li>
+							根据nodes和ways的属性的不同，分别采取不同颜色和粗细的线条来绘制，使地图更美观
+						</li>
+						<li>
+							地图实现简单的分层显示：对于区域大的地图只显示相对面积较大的地理元素，区域小的地图才将区域内所有的地理元素显示出来
+						</li>
+					</ul>
+				</p>
+			</div>
+			<br/>
+			<h3>关于作者</h3>
+			<table style="margin-left:3%">
+				<tr>
+					<td>姓名：</td>
+					<td>梁晓涛</td>
+				</tr>
+				<tr>
+					<td>学号：</td>
+					<td>13307130319</td>
+				</tr>
+				<tr>
+					<td>专业：</td>
+					<td>计算机科学与技术</td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><a href="mailto:13307130319@fudan.edu.cn">13307130319@fudan.edu.cn</a></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
+

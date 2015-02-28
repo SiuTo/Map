@@ -1,0 +1,28 @@
+canvas
+{
+	border: 2px solid #A0A0A0;
+}
+
+body
+{
+	font-family: Arial, "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
+}
+
+p, ol, ul, table
+{
+	line-height: 1.5;
+}
+
+.menu
+{
+	text-align: center;
+	color: white;
+	background-color: purple;
+	width: 120px;
+}
+
+a:link, a:visited {text-decoration:none;}
+a:hover, a:active {text-decoration:underline;}
+a {color:black;}
+.menu a {color:white;}
+
